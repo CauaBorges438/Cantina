@@ -1,0 +1,16 @@
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.Form1.resources
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.csproj.GenerateResource.cache
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.AssemblyInfoInputs.cache
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.AssemblyInfo.cs
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.csproj.CoreCompileInputs.cache
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.exe
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.deps.json
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.runtimeconfig.json
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.dll
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.pdb
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.dll
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\refint\CantinaComTela.dll
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.pdb
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.genruntimeconfig.cache
+C:\Users\25163060\source\repos\CantinaComTela\CantinaComTela\obj\Debug\net8.0-windows\ref\CantinaComTela.dll
