@@ -32,9 +32,10 @@
               "RelativeDocumentMoniker": "CantinaComTela\\Class1.cs",
               "ToolTip": "C:\\Users\\25163060\\source\\repos\\CantinaComTela\\CantinaComTela\\Class1.cs",
               "RelativeToolTip": "CantinaComTela\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T13:46:43.236Z"
+              "WhenOpened": "2025-04-30T13:46:43.236Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -44,7 +45,7 @@
               "RelativeDocumentMoniker": "CantinaComTela\\Form1.cs",
               "ToolTip": "C:\\Users\\25163060\\source\\repos\\CantinaComTela\\CantinaComTela\\Form1.cs",
               "RelativeToolTip": "CantinaComTela\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswF4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T13:18:57.218Z",
               "EditorCaption": ""
@@ -58,7 +59,8 @@
               "ToolTip": "C:\\Users\\25163060\\source\\repos\\CantinaComTela\\CantinaComTela\\Form1.cs [Projeto]",
               "RelativeToolTip": "CantinaComTela\\Form1.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T12:27:45.054Z"
+              "WhenOpened": "2025-04-30T12:27:45.054Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }

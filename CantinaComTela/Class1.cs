@@ -12,10 +12,12 @@ namespace CantinaComTela
         private double preco;
 
 
-        public Cardapio(string produto, double preco)
+
+        public Cardapio(string produto, double preco, int quant)
         {
             this.produto = produto;
             this.preco = preco;
+
         }
 
         public string Produto
@@ -24,7 +26,9 @@ namespace CantinaComTela
         }
 
         public double Preco
-            { get { return preco; } }
+            { get { return preco; }
+              set { preco = value; }
+            }
 
         public override string ToString()
         {

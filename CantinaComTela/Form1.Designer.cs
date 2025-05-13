@@ -36,6 +36,12 @@
             btnSair = new Button();
             lblCarrinho = new Label();
             total = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            quantidade = new NumericUpDown();
+            dateTimePicker3 = new DateTimePicker();
+            txtNome = new TextBox();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             SuspendLayout();
             // 
             // listBoxProdutos
@@ -90,7 +96,7 @@
             // 
             // btnSair
             // 
-            btnSair.Location = new Point(448, 428);
+            btnSair.Location = new Point(439, 432);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(173, 24);
             btnSair.TabIndex = 5;
@@ -117,11 +123,59 @@
             total.TabIndex = 7;
             total.Click += total_Click;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(141, 427);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(83, 23);
+            dateTimePicker1.TabIndex = 8;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
+            // 
+            // quantidade
+            // 
+            quantidade.Location = new Point(217, 332);
+            quantidade.Name = "quantidade";
+            quantidade.Size = new Size(43, 23);
+            quantidade.TabIndex = 9;
+            quantidade.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Format = DateTimePickerFormat.Time;
+            dateTimePicker3.Location = new Point(252, 427);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(66, 23);
+            dateTimePicker3.TabIndex = 11;
+            // 
+            // txtNome
+            // 
+            txtNome.Location = new Point(704, 430);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(281, 23);
+            txtNome.TabIndex = 12;
+            txtNome.TextChanged += txtNome_TextChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(653, 437);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 15);
+            label1.TabIndex = 13;
+            label1.Text = "NOME:";
+            label1.Click += label1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1083, 501);
+            ClientSize = new Size(1578, 685);
+            Controls.Add(label1);
+            Controls.Add(txtNome);
+            Controls.Add(dateTimePicker3);
+            Controls.Add(quantidade);
+            Controls.Add(dateTimePicker1);
             Controls.Add(total);
             Controls.Add(lblCarrinho);
             Controls.Add(btnSair);
@@ -133,6 +187,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)quantidade).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -147,5 +202,10 @@
         private Button btnSair;
         private Label lblCarrinho;
         private Label total;
+        private DateTimePicker dateTimePicker1;
+        private NumericUpDown quantidade;
+        private DateTimePicker dateTimePicker3;
+        private TextBox txtNome;
+        private Label label1;
     }
 }
