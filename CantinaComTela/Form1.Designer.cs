@@ -147,6 +147,7 @@
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(66, 23);
             dateTimePicker3.TabIndex = 11;
+            dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
             // txtNome
             // 
