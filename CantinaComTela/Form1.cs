@@ -15,12 +15,12 @@ namespace CantinaComTela
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             int quant = (int)quantidade.Value;
-            
+
             if (listBoxProdutos.SelectedIndex != -1 && quantidade.Value > 0)
             {
                 Cardapio produtoSelecionado = (Cardapio)listBoxProdutos.SelectedItem;
                 Cardapio novoItem = new Cardapio(produtoSelecionado.Produto, produtoSelecionado.Preco);
-                novoItem.Quantidade= (int)quantidade.Value;
+                novoItem.Quantidade = (int)quantidade.Value;
                 listBoxPedido.Items.Add(novoItem);
                 totalPedido += produtoSelecionado.Preco * quant;
 
@@ -40,7 +40,12 @@ namespace CantinaComTela
 
         private void listBoxPedido_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (listBoxProdutos.SelectedIndex != -1)
+            {
+                Cardapio produtoSelecionado = (Cardapio)listBoxPedido.SelectedItem;
+                quantidade.Value = produtoSelecionado.Quantidade;
+                quantidade.Enabled = false;
+            }
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -68,7 +73,7 @@ namespace CantinaComTela
             {
                 Cardapio produtoSelecionado = (Cardapio)listBoxPedido.SelectedItem;
                 listBoxPedido.Items.Remove(produtoSelecionado);
-                totalPedido -= produtoSelecionado.Preco;
+                totalPedido -= produtoSelecionado.Preco * produtoSelecionado.Quantidade;
 
                 total.Text = $"Total: R${totalPedido:f2}";
                 listBoxProdutos.SelectedIndex = -1;
@@ -95,8 +100,8 @@ namespace CantinaComTela
             int quant = (int)quantidade.Value;
             if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0)
             {
-                
-                MessageBox.Show(@$"O total é R$ {quant}x {totalPedido:f2}
+
+                MessageBox.Show(@$"O total é R$ {totalPedido:f2}
 
 {txtNome.Text} 
 {dateTimePicker1.Text} 
@@ -135,6 +140,11 @@ namespace CantinaComTela
         }
 
         private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pagamentoBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

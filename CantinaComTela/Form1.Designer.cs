@@ -41,6 +41,7 @@
             dateTimePicker3 = new DateTimePicker();
             txtNome = new TextBox();
             label1 = new Label();
+            pagamentoBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             SuspendLayout();
             // 
@@ -167,11 +168,21 @@
             label1.Text = "NOME:";
             label1.Click += label1_Click;
             // 
+            // pagamentoBox1
+            // 
+            pagamentoBox1.FormattingEnabled = true;
+            pagamentoBox1.Location = new Point(765, 382);
+            pagamentoBox1.Name = "pagamentoBox1";
+            pagamentoBox1.Size = new Size(121, 23);
+            pagamentoBox1.TabIndex = 14;
+            pagamentoBox1.SelectedIndexChanged += pagamentoBox1_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1578, 685);
+            Controls.Add(pagamentoBox1);
             Controls.Add(label1);
             Controls.Add(txtNome);
             Controls.Add(dateTimePicker3);
@@ -208,5 +219,6 @@
         private DateTimePicker dateTimePicker3;
         private TextBox txtNome;
         private Label label1;
+        private ComboBox pagamentoBox1;
     }
 }
