@@ -42,6 +42,7 @@
             txtNome = new TextBox();
             label1 = new Label();
             pagamentoBox1 = new ComboBox();
+            btnEncerrar = new Button();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             SuspendLayout();
             // 
@@ -177,11 +178,22 @@
             pagamentoBox1.TabIndex = 14;
             pagamentoBox1.SelectedIndexChanged += pagamentoBox1_SelectedIndexChanged;
             // 
+            // btnEncerrar
+            // 
+            btnEncerrar.Location = new Point(661, 563);
+            btnEncerrar.Name = "btnEncerrar";
+            btnEncerrar.Size = new Size(75, 23);
+            btnEncerrar.TabIndex = 15;
+            btnEncerrar.Text = "Sair";
+            btnEncerrar.UseVisualStyleBackColor = true;
+            btnEncerrar.Click += btnEncerrar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1578, 685);
+            Controls.Add(btnEncerrar);
             Controls.Add(pagamentoBox1);
             Controls.Add(label1);
             Controls.Add(txtNome);
@@ -220,5 +232,6 @@
         private TextBox txtNome;
         private Label label1;
         private ComboBox pagamentoBox1;
+        private Button btnEncerrar;
     }
 }

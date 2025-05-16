@@ -22,6 +22,7 @@ namespace CantinaComTela
                 Cardapio novoItem = new Cardapio(produtoSelecionado.Produto, produtoSelecionado.Preco);
                 novoItem.Quantidade = (int)quantidade.Value;
                 listBoxPedido.Items.Add(novoItem);
+                pedido.Add(novoItem);
                 totalPedido += produtoSelecionado.Preco * quant;
 
                 total.Text = $"Total: R${totalPedido:f2}";
@@ -40,12 +41,7 @@ namespace CantinaComTela
 
         private void listBoxPedido_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxProdutos.SelectedIndex != -1)
-            {
-                Cardapio produtoSelecionado = (Cardapio)listBoxPedido.SelectedItem;
-                quantidade.Value = produtoSelecionado.Quantidade;
-                quantidade.Enabled = false;
-            }
+
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -100,14 +96,17 @@ namespace CantinaComTela
             int quant = (int)quantidade.Value;
             if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0)
             {
-
+                string Pedido = string.Join(",", listBoxPedido.Text);
                 MessageBox.Show(@$"O total é R$ {totalPedido:f2}
-
-{txtNome.Text} 
-{dateTimePicker1.Text} 
-{dateTimePicker3.Text}");
+{Pedido}
+Consumidor: {txtNome.Text} 
+");
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
+            }
+            else if (txtNome.Text.Length <= 0)
+            {
+                MessageBox.Show("Coloque um nome");
             }
             else
             {
@@ -132,6 +131,7 @@ namespace CantinaComTela
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -147,6 +147,11 @@ namespace CantinaComTela
         private void pagamentoBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEncerrar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
