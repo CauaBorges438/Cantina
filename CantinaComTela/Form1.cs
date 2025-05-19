@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CantinaComTela
 {
@@ -10,7 +11,7 @@ namespace CantinaComTela
         }
 
         private double totalPedido = 0;
-        List<Cardapio> pedido = new();
+        List<Cardapio> pedidos = new();
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -22,11 +23,12 @@ namespace CantinaComTela
                 Cardapio novoItem = new Cardapio(produtoSelecionado.Produto, produtoSelecionado.Preco);
                 novoItem.Quantidade = (int)quantidade.Value;
                 listBoxPedido.Items.Add(novoItem);
-                pedido.Add(novoItem);
+                pedidos.Add(novoItem);
                 totalPedido += produtoSelecionado.Preco * quant;
 
                 total.Text = $"Total: R${totalPedido:f2}";
                 listBoxProdutos.SelectedIndex = -1;
+                quantidade.Value = 0;
             }
             else
             {
@@ -50,16 +52,33 @@ namespace CantinaComTela
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            listBoxProdutos.Items.Add(new Cardapio("Pão de Queijo", 3.50));
 
             listBoxProdutos.Items.Add(new Cardapio("Coxinha", 5.00));
 
-            listBoxProdutos.Items.Add(new Cardapio("Pastel", 6.00));
+            listBoxProdutos.Items.Add(new Cardapio("Pastel de Carne", 6.00));
 
-            listBoxProdutos.Items.Add(new Cardapio("Refrigerante", 4.50));
+            listBoxProdutos.Items.Add(new Cardapio("Pastel de Queijo", 5.50));
 
-            listBoxProdutos.Items.Add(new Cardapio("Suco", 3.00));
+            listBoxProdutos.Items.Add(new Cardapio("Suco Natural (300ml)", 4.00));
 
-            listBoxProdutos.Items.Add(new Cardapio("Brigadeiro", 3.00));
+            listBoxProdutos.Items.Add(new Cardapio("Refrigerante Lata", 4.50));
+
+            listBoxProdutos.Items.Add(new Cardapio("Hambúrguer Simples ", 8.00));
+
+            listBoxProdutos.Items.Add(new Cardapio("Hambúrguer com Queijo ", 9.00));
+
+            listBoxProdutos.Items.Add(new Cardapio("X-Tudo ", 12.00));
+
+            listBoxProdutos.Items.Add(new Cardapio("Água Mineral (500ml)", 2.50));
+
+            pagamentoBox1.Items.Add("Pix");
+            pagamentoBox1.Items.Add("Dinheiro");
+            pagamentoBox1.Items.Add("Crédito");
+            pagamentoBox1.Items.Add("Débito");
+            pagamentoBox1.Items.Add("VR");
+            pagamentoBox1.SelectedIndex = 0;
+
         }
 
         private void btnRemover_Click_1(object sender, EventArgs e)
@@ -93,16 +112,22 @@ namespace CantinaComTela
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            int quant = (int)quantidade.Value;
+
             if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0)
             {
-                string Pedido = string.Join(",", listBoxPedido.Text);
-                MessageBox.Show(@$"O total é R$ {totalPedido:f2}
+                string Pedido = string.Join("\n", pedidos);
+
+                MessageBox.Show(@$"Consumidor: {txtNome.Text}
 {Pedido}
-Consumidor: {txtNome.Text} 
+
+O total é R$ {totalPedido:f2}
 ");
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
+                txtNome.Text = "";
+                pagamentoBox1.SelectedIndex = 0;
+
+
             }
             else if (txtNome.Text.Length <= 0)
             {
@@ -146,12 +171,41 @@ Consumidor: {txtNome.Text}
 
         private void pagamentoBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            pagamentoBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            
         }
 
         private void btnEncerrar_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (pagamentoBox1.Text == "Dinheiro")
+            {
+                textBox1.Visible = true;
+                label4.Visible = true;
+                btnTroco.Visible = true;
+                label3.Visible = true;
+                textBox2.Visible = true;
+            }
+
+
+            if (double.TryParse(textBox1.Text, out double pago))
+            {
+                if (pago >= totalPedido)
+                {
+                    pago = pago - totalPedido;
+                    textBox2.Text = pago.ToString();
+                }
+            }
+        }
+
+        private void btnTroco_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

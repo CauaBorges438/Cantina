@@ -43,11 +43,20 @@
             label1 = new Label();
             pagamentoBox1 = new ComboBox();
             btnEncerrar = new Button();
+            label2 = new Label();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            label4 = new Label();
+            pictureBox1 = new PictureBox();
+            btnTroco = new Button();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // listBoxProdutos
             // 
+            listBoxProdutos.BackColor = Color.LightGray;
             listBoxProdutos.FormattingEnabled = true;
             listBoxProdutos.ItemHeight = 15;
             listBoxProdutos.Location = new Point(116, 158);
@@ -58,6 +67,7 @@
             // 
             // listBoxPedido
             // 
+            listBoxPedido.BackColor = Color.LightGray;
             listBoxPedido.FormattingEnabled = true;
             listBoxPedido.ItemHeight = 15;
             listBoxPedido.Location = new Point(704, 158);
@@ -68,12 +78,13 @@
             // 
             // btnRemover
             // 
-            btnRemover.Location = new Point(474, 255);
+            btnRemover.BackColor = Color.GreenYellow;
+            btnRemover.Location = new Point(463, 255);
             btnRemover.Name = "btnRemover";
-            btnRemover.Size = new Size(124, 23);
+            btnRemover.Size = new Size(149, 23);
             btnRemover.TabIndex = 2;
             btnRemover.Text = "< Remover";
-            btnRemover.UseVisualStyleBackColor = true;
+            btnRemover.UseVisualStyleBackColor = false;
             btnRemover.Click += btnRemover_Click_1;
             // 
             // lblProdutos
@@ -88,22 +99,24 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(474, 193);
+            btnAdicionar.BackColor = Color.GreenYellow;
+            btnAdicionar.Location = new Point(463, 193);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(124, 23);
+            btnAdicionar.Size = new Size(149, 23);
             btnAdicionar.TabIndex = 4;
             btnAdicionar.Text = "Adicionar >";
-            btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.UseVisualStyleBackColor = false;
             btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnSair
             // 
-            btnSair.Location = new Point(439, 432);
+            btnSair.BackColor = Color.GreenYellow;
+            btnSair.Location = new Point(439, 562);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(173, 24);
+            btnSair.Size = new Size(217, 26);
             btnSair.TabIndex = 5;
             btnSair.Text = "Finalizar compra";
-            btnSair.UseVisualStyleBackColor = true;
+            btnSair.UseVisualStyleBackColor = false;
             btnSair.Click += btnSair_Click;
             // 
             // lblCarrinho
@@ -119,16 +132,17 @@
             // 
             total.AutoSize = true;
             total.Font = new Font("Segoe UI", 14F);
-            total.Location = new Point(612, 369);
+            total.Location = new Point(597, 485);
             total.Name = "total";
-            total.Size = new Size(0, 25);
+            total.Size = new Size(97, 25);
             total.TabIndex = 7;
+            total.Text = "Total: R$ 0";
             total.Click += total_Click;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(141, 427);
+            dateTimePicker1.Location = new Point(177, 563);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(83, 23);
             dateTimePicker1.TabIndex = 8;
@@ -145,24 +159,24 @@
             // dateTimePicker3
             // 
             dateTimePicker3.Format = DateTimePickerFormat.Time;
-            dateTimePicker3.Location = new Point(252, 427);
+            dateTimePicker3.Location = new Point(290, 563);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(66, 23);
+            dateTimePicker3.Size = new Size(68, 23);
             dateTimePicker3.TabIndex = 11;
             dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(704, 430);
+            txtNome.Location = new Point(864, 331);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(281, 23);
+            txtNome.Size = new Size(121, 23);
             txtNome.TabIndex = 12;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(653, 437);
+            label1.Location = new Point(809, 334);
             label1.Name = "label1";
             label1.Size = new Size(45, 15);
             label1.TabIndex = 13;
@@ -172,7 +186,7 @@
             // pagamentoBox1
             // 
             pagamentoBox1.FormattingEnabled = true;
-            pagamentoBox1.Location = new Point(765, 382);
+            pagamentoBox1.Location = new Point(864, 371);
             pagamentoBox1.Name = "pagamentoBox1";
             pagamentoBox1.Size = new Size(121, 23);
             pagamentoBox1.TabIndex = 14;
@@ -180,19 +194,96 @@
             // 
             // btnEncerrar
             // 
-            btnEncerrar.Location = new Point(661, 563);
+            btnEncerrar.BackColor = Color.GreenYellow;
+            btnEncerrar.Location = new Point(767, 565);
             btnEncerrar.Name = "btnEncerrar";
-            btnEncerrar.Size = new Size(75, 23);
+            btnEncerrar.Size = new Size(107, 23);
             btnEncerrar.TabIndex = 15;
             btnEncerrar.Text = "Sair";
-            btnEncerrar.UseVisualStyleBackColor = true;
+            btnEncerrar.UseVisualStyleBackColor = false;
             btnEncerrar.Click += btnEncerrar_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(716, 375);
+            label2.Name = "label2";
+            label2.Size = new Size(142, 15);
+            label2.TabIndex = 16;
+            label2.Text = "FORMA DE PAGAMENTO:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(805, 488);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 15);
+            label3.TabIndex = 17;
+            label3.Text = "TROCO:";
+            label3.Visible = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(864, 411);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(121, 23);
+            textBox1.TabIndex = 18;
+            textBox1.Visible = false;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(864, 482);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(121, 23);
+            textBox2.TabIndex = 19;
+            textBox2.Visible = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(808, 414);
+            label4.Name = "label4";
+            label4.Size = new Size(46, 15);
+            label4.TabIndex = 20;
+            label4.Text = "VALOR:";
+            label4.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._260a98d8_86c4_417f_9ef5_c8acc317b738_removebg_preview;
+            pictureBox1.Location = new Point(425, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(244, 157);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 21;
+            pictureBox1.TabStop = false;
+            // 
+            // btnTroco
+            // 
+            btnTroco.BackColor = Color.GreenYellow;
+            btnTroco.Location = new Point(864, 446);
+            btnTroco.Name = "btnTroco";
+            btnTroco.Size = new Size(121, 23);
+            btnTroco.TabIndex = 22;
+            btnTroco.Text = "Troco";
+            btnTroco.UseVisualStyleBackColor = false;
+            btnTroco.Visible = false;
+            btnTroco.Click += btnTroco_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1578, 685);
+            BackColor = Color.LightGray;
+            ClientSize = new Size(1077, 656);
+            Controls.Add(btnTroco);
+            Controls.Add(pictureBox1);
+            Controls.Add(label4);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(btnEncerrar);
             Controls.Add(pagamentoBox1);
             Controls.Add(label1);
@@ -212,6 +303,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)quantidade).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -233,5 +325,12 @@
         private Label label1;
         private ComboBox pagamentoBox1;
         private Button btnEncerrar;
+        private Label label2;
+        private Label label3;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label4;
+        private PictureBox pictureBox1;
+        private Button btnTroco;
     }
 }
