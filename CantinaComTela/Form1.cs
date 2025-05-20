@@ -173,7 +173,24 @@ O total é R$ {totalPedido:f2}
         {
             pagamentoBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            
+            if (pagamentoBox1.SelectedIndex == 1)
+            {
+                textBox1.Visible = true;
+                label4.Visible = true;
+                btnTroco.Visible = true;
+                label3.Visible = true;
+                textBox2.Visible = true;
+            }
+            else
+            {
+                textBox1.Visible = false;
+                label4.Visible = false;
+                btnTroco.Visible = false;
+                label3.Visible = false;
+                textBox2.Visible = false;
+            }
+
+
         }
 
         private void btnEncerrar_Click(object sender, EventArgs e)
@@ -183,24 +200,22 @@ O total é R$ {totalPedido:f2}
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (pagamentoBox1.Text == "Dinheiro")
-            {
-                textBox1.Visible = true;
-                label4.Visible = true;
-                btnTroco.Visible = true;
-                label3.Visible = true;
-                textBox2.Visible = true;
-            }
-
-
             if (double.TryParse(textBox1.Text, out double pago))
             {
+
                 if (pago >= totalPedido)
                 {
                     pago = pago - totalPedido;
                     textBox2.Text = pago.ToString();
                 }
+
+                else
+                {
+                    MessageBox.Show("O valor é menor que o total");
+                }
+
             }
+        
         }
 
         private void btnTroco_Click(object sender, EventArgs e)
