@@ -175,15 +175,16 @@ O total é R$ {totalPedido:f2}
 
             if (pagamentoBox1.SelectedIndex == 1)
             {
-                textBox1.Visible = true;
+                textBox3.Visible = true;
                 label4.Visible = true;
                 btnTroco.Visible = true;
                 label3.Visible = true;
                 textBox2.Visible = true;
+                textBox2.ReadOnly = true;
             }
             else
             {
-                textBox1.Visible = false;
+                textBox3.Visible = false;
                 label4.Visible = false;
                 btnTroco.Visible = false;
                 label3.Visible = false;
@@ -200,23 +201,47 @@ O total é R$ {totalPedido:f2}
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (double.TryParse(textBox1.Text, out double pago))
+
+
+        }
+
+        private void btnTroco_Click(object sender, EventArgs e)
+        {
+            if (double.TryParse(textBox3.Text, out double pago))
             {
 
                 if (pago >= totalPedido)
                 {
                     pago = pago - totalPedido;
-                    textBox2.Text = pago.ToString();
+                    textBox2.Text = pago.ToString("F2");
                 }
 
-
+                else
+                {
+                    MessageBox.Show("Valor menor que o total");
+                }
             }
-        
         }
 
-        private void btnTroco_Click(object sender, EventArgs e)
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
+            var txt = sender as System.Windows.Forms.TextBox;
 
+            if (char.IsControl(e.KeyChar))
+                return;
+
+            if (char.IsDigit(e.KeyChar))
+                return;
+
+            if (e.KeyChar == ',' && !txt.Text.Contains(","))
+                return;
+
+            e.Handled = true;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            pictureBox2.SendToBack();
         }
     }
 }
