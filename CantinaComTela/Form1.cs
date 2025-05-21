@@ -209,10 +209,6 @@ O total é R$ {totalPedido:f2}
                     textBox2.Text = pago.ToString();
                 }
 
-                else
-                {
-                    MessageBox.Show("O valor é menor que o total");
-                }
 
             }
         

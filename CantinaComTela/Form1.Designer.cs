@@ -57,6 +57,7 @@
             // listBoxProdutos
             // 
             listBoxProdutos.BackColor = Color.LightGray;
+            listBoxProdutos.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxProdutos.FormattingEnabled = true;
             listBoxProdutos.ItemHeight = 15;
             listBoxProdutos.Location = new Point(116, 158);
@@ -68,6 +69,7 @@
             // listBoxPedido
             // 
             listBoxPedido.BackColor = Color.LightGray;
+            listBoxPedido.ForeColor = Color.FromArgb(17, 25, 12);
             listBoxPedido.FormattingEnabled = true;
             listBoxPedido.ItemHeight = 15;
             listBoxPedido.Location = new Point(704, 158);
@@ -78,7 +80,7 @@
             // 
             // btnRemover
             // 
-            btnRemover.BackColor = Color.GreenYellow;
+            btnRemover.BackColor = Color.FromArgb(225, 255, 0);
             btnRemover.Location = new Point(463, 255);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(149, 23);
@@ -99,7 +101,7 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.BackColor = Color.GreenYellow;
+            btnAdicionar.BackColor = Color.FromArgb(225, 255, 0);
             btnAdicionar.Location = new Point(463, 193);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(149, 23);
@@ -110,7 +112,7 @@
             // 
             // btnSair
             // 
-            btnSair.BackColor = Color.GreenYellow;
+            btnSair.BackColor = Color.FromArgb(225, 255, 0);
             btnSair.Location = new Point(439, 562);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(217, 26);
@@ -194,7 +196,7 @@
             // 
             // btnEncerrar
             // 
-            btnEncerrar.BackColor = Color.GreenYellow;
+            btnEncerrar.BackColor = Color.FromArgb(225, 255, 0);
             btnEncerrar.Location = new Point(767, 565);
             btnEncerrar.Name = "btnEncerrar";
             btnEncerrar.Size = new Size(107, 23);
@@ -261,7 +263,7 @@
             // 
             // btnTroco
             // 
-            btnTroco.BackColor = Color.GreenYellow;
+            btnTroco.BackColor = Color.FromArgb(225, 255, 0);
             btnTroco.Location = new Point(864, 446);
             btnTroco.Name = "btnTroco";
             btnTroco.Size = new Size(121, 23);
