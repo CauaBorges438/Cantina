@@ -116,7 +116,7 @@ namespace CantinaComTela
         private void btnSair_Click(object sender, EventArgs e)
         {
 
-            if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0)
+            if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && (textBox2.Text != ""))
             {
                 string Pedido = string.Join("\n", pedidos);
 
@@ -134,13 +134,15 @@ Para viajem: {comboBox1.Text}
 
 
             }
+
             else if (txtNome.Text.Length <= 0)
             {
                 MessageBox.Show("Coloque um nome");
             }
+            
             else
             {
-                MessageBox.Show("Não tem pedido");
+                MessageBox.Show("INVALIDO");
             }
         }
 
@@ -257,6 +259,11 @@ Para viajem: {comboBox1.Text}
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

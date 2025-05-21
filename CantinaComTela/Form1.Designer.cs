@@ -248,6 +248,7 @@
             textBox2.Size = new Size(121, 22);
             textBox2.TabIndex = 19;
             textBox2.Visible = false;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label4
             // 
