@@ -50,6 +50,8 @@
             pictureBox1 = new PictureBox();
             btnTroco = new Button();
             textBox3 = new TextBox();
+            comboBox1 = new ComboBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -199,7 +201,7 @@
             // 
             pagamentoBox1.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
             pagamentoBox1.FormattingEnabled = true;
-            pagamentoBox1.Location = new Point(864, 371);
+            pagamentoBox1.Location = new Point(864, 363);
             pagamentoBox1.Name = "pagamentoBox1";
             pagamentoBox1.Size = new Size(121, 23);
             pagamentoBox1.TabIndex = 14;
@@ -221,7 +223,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            label2.Location = new Point(716, 375);
+            label2.Location = new Point(716, 367);
             label2.Name = "label2";
             label2.Size = new Size(139, 15);
             label2.TabIndex = 16;
@@ -231,7 +233,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            label3.Location = new Point(805, 488);
+            label3.Location = new Point(805, 437);
             label3.Name = "label3";
             label3.Size = new Size(50, 15);
             label3.TabIndex = 17;
@@ -241,7 +243,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            textBox2.Location = new Point(864, 482);
+            textBox2.Location = new Point(864, 463);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(121, 22);
             textBox2.TabIndex = 19;
@@ -251,7 +253,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            label4.Location = new Point(808, 414);
+            label4.Location = new Point(808, 401);
             label4.Name = "label4";
             label4.Size = new Size(47, 15);
             label4.TabIndex = 20;
@@ -272,7 +274,7 @@
             // 
             btnTroco.BackColor = Color.FromArgb(225, 255, 0);
             btnTroco.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            btnTroco.Location = new Point(864, 446);
+            btnTroco.Location = new Point(864, 433);
             btnTroco.Name = "btnTroco";
             btnTroco.Size = new Size(121, 23);
             btnTroco.TabIndex = 22;
@@ -284,11 +286,31 @@
             // textBox3
             // 
             textBox3.Font = new Font("Agrandir", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(864, 411);
+            textBox3.Location = new Point(864, 399);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(121, 23);
             textBox3.TabIndex = 23;
             textBox3.KeyPress += textBox3_KeyPress;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(864, 492);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 24;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Agrandir", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(802, 495);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 16);
+            label5.TabIndex = 25;
+            label5.Text = "Viagem:";
+            label5.Click += label5_Click;
             // 
             // Form1
             // 
@@ -296,6 +318,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1046, 629);
+            Controls.Add(label5);
+            Controls.Add(comboBox1);
             Controls.Add(textBox3);
             Controls.Add(btnTroco);
             Controls.Add(pictureBox1);
@@ -351,5 +375,7 @@
         private PictureBox pictureBox1;
         private Button btnTroco;
         private TextBox textBox3;
+        private ComboBox comboBox1;
+        private Label label5;
     }
 }

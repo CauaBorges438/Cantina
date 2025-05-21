@@ -79,6 +79,9 @@ namespace CantinaComTela
             pagamentoBox1.Items.Add("VR");
             pagamentoBox1.SelectedIndex = 0;
 
+            comboBox1.Items.Add("Não");
+            comboBox1.Items.Add("Sim");
+            comboBox1.SelectedIndex = 0;
         }
 
         private void btnRemover_Click_1(object sender, EventArgs e)
@@ -121,6 +124,8 @@ namespace CantinaComTela
 {Pedido}
 
 O total é R$ {totalPedido:f2}
+
+Para viajem: {comboBox1.Text}
 ");
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
@@ -241,7 +246,17 @@ O total é R$ {totalPedido:f2}
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            pictureBox2.SendToBack();
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }

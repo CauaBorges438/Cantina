@@ -121,4 +121,7 @@
   <data name="260a98d8-86c4-417f-9ef5-c8acc317b738-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\260a98d8-86c4-417f-9ef5-c8acc317b738-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Design sem nome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Design sem nome.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
