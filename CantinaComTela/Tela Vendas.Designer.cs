@@ -1,6 +1,6 @@
 ﻿namespace CantinaComTela
 {
-    partial class Form1
+    partial class formsVenda
     {
         /// <summary>
         ///  Required designer variable.
@@ -83,7 +83,7 @@
             // btnRemover
             // 
             btnRemover.BackColor = Color.FromArgb(225, 255, 0);
-            btnRemover.Font = new Font("Agrandir", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRemover.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             btnRemover.Location = new Point(463, 255);
             btnRemover.Name = "btnRemover";
             btnRemover.Size = new Size(149, 23);
@@ -95,10 +95,10 @@
             // lblProdutos
             // 
             lblProdutos.AutoSize = true;
-            lblProdutos.Font = new Font("Agrandir", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblProdutos.Location = new Point(191, 127);
+            lblProdutos.Font = new Font("Agrandir", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblProdutos.Location = new Point(139, 123);
             lblProdutos.Name = "lblProdutos";
-            lblProdutos.Size = new Size(120, 16);
+            lblProdutos.Size = new Size(161, 21);
             lblProdutos.TabIndex = 3;
             lblProdutos.Text = "Produtos da cantina";
             lblProdutos.Click += txtProdutos_Click;
@@ -106,7 +106,7 @@
             // btnAdicionar
             // 
             btnAdicionar.BackColor = Color.FromArgb(225, 255, 0);
-            btnAdicionar.Font = new Font("Agrandir", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdicionar.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             btnAdicionar.Location = new Point(463, 193);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(149, 23);
@@ -118,7 +118,7 @@
             // btnSair
             // 
             btnSair.BackColor = Color.FromArgb(225, 255, 0);
-            btnSair.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
+            btnSair.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             btnSair.Location = new Point(439, 562);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(217, 26);
@@ -130,31 +130,31 @@
             // lblCarrinho
             // 
             lblCarrinho.AutoSize = true;
-            lblCarrinho.Font = new Font("Agrandir", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCarrinho.Location = new Point(821, 127);
+            lblCarrinho.Font = new Font("Agrandir", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCarrinho.Location = new Point(787, 123);
             lblCarrinho.Name = "lblCarrinho";
-            lblCarrinho.Size = new Size(58, 16);
+            lblCarrinho.Size = new Size(78, 21);
             lblCarrinho.TabIndex = 6;
             lblCarrinho.Text = "Carrinho";
             // 
             // total
             // 
             total.AutoSize = true;
-            total.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            total.Location = new Point(597, 485);
+            total.Font = new Font("Agrandir Narrow", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            total.Location = new Point(594, 495);
             total.Name = "total";
-            total.Size = new Size(62, 15);
+            total.Size = new Size(85, 21);
             total.TabIndex = 7;
             total.Text = "Total: R$ 0";
             total.Click += total_Click;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
+            dateTimePicker1.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold);
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(177, 563);
+            dateTimePicker1.Location = new Point(171, 563);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(83, 22);
+            dateTimePicker1.Size = new Size(89, 24);
             dateTimePicker1.TabIndex = 8;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
@@ -169,11 +169,11 @@
             // 
             // dateTimePicker3
             // 
-            dateTimePicker3.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
+            dateTimePicker3.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold);
             dateTimePicker3.Format = DateTimePickerFormat.Time;
             dateTimePicker3.Location = new Point(290, 563);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(68, 22);
+            dateTimePicker3.Size = new Size(73, 24);
             dateTimePicker3.TabIndex = 11;
             dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
@@ -189,10 +189,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            label1.Location = new Point(809, 334);
+            label1.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(804, 332);
             label1.Name = "label1";
-            label1.Size = new Size(43, 15);
+            label1.Size = new Size(47, 17);
             label1.TabIndex = 13;
             label1.Text = "NOME:";
             label1.Click += label1_Click;
@@ -210,7 +210,7 @@
             // btnEncerrar
             // 
             btnEncerrar.BackColor = Color.FromArgb(225, 255, 0);
-            btnEncerrar.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
+            btnEncerrar.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEncerrar.Location = new Point(767, 565);
             btnEncerrar.Name = "btnEncerrar";
             btnEncerrar.Size = new Size(107, 23);
@@ -222,20 +222,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            label2.Location = new Point(716, 367);
+            label2.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold);
+            label2.Location = new Point(698, 365);
             label2.Name = "label2";
-            label2.Size = new Size(139, 15);
+            label2.Size = new Size(151, 17);
             label2.TabIndex = 16;
             label2.Text = "FORMA DE PAGAMENTO:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            label3.Location = new Point(805, 437);
+            label3.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold);
+            label3.Location = new Point(800, 463);
             label3.Name = "label3";
-            label3.Size = new Size(50, 15);
+            label3.Size = new Size(55, 17);
             label3.TabIndex = 17;
             label3.Text = "TROCO:";
             label3.Visible = false;
@@ -253,10 +253,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
-            label4.Location = new Point(808, 401);
+            label4.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold);
+            label4.Location = new Point(804, 401);
             label4.Name = "label4";
-            label4.Size = new Size(47, 15);
+            label4.Size = new Size(49, 17);
             label4.TabIndex = 20;
             label4.Text = "VALOR:";
             label4.Visible = false;
@@ -274,7 +274,7 @@
             // btnTroco
             // 
             btnTroco.BackColor = Color.FromArgb(225, 255, 0);
-            btnTroco.Font = new Font("Agrandir", 8.249999F, FontStyle.Bold);
+            btnTroco.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold);
             btnTroco.Location = new Point(864, 433);
             btnTroco.Name = "btnTroco";
             btnTroco.Size = new Size(121, 23);
@@ -291,29 +291,28 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(121, 23);
             textBox3.TabIndex = 23;
+            textBox3.TextChanged += textBox3_TextChanged;
             textBox3.KeyPress += textBox3_KeyPress;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(864, 492);
+            comboBox1.Location = new Point(864, 496);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 24;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            comboBox1.TabIndex = 28;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Agrandir", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(802, 495);
+            label5.Font = new Font("Agrandir Narrow", 9.75F, FontStyle.Bold);
+            label5.Location = new Point(763, 498);
             label5.Name = "label5";
-            label5.Size = new Size(51, 16);
-            label5.TabIndex = 25;
-            label5.Text = "Viagem:";
-            label5.Click += label5_Click;
+            label5.Size = new Size(92, 17);
+            label5.TabIndex = 29;
+            label5.Text = "PARA VIAGEM:";
             // 
-            // Form1
+            // formsVenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -343,7 +342,7 @@
             Controls.Add(btnRemover);
             Controls.Add(listBoxPedido);
             Controls.Add(listBoxProdutos);
-            Name = "Form1";
+            Name = "formsVenda";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)quantidade).EndInit();

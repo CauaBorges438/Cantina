@@ -21,7 +21,6 @@ C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\bin\Debug\net8.0-windo
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.runtimeconfig.json
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.dll
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\bin\Debug\net8.0-windows\CantinaComTela.pdb
-C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.Form1.resources
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.Properties.Resources.resources
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.csproj.GenerateResource.cache
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.GeneratedMSBuildEditorConfig.editorconfig
@@ -34,3 +33,5 @@ C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windo
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.pdb
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.genruntimeconfig.cache
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\ref\CantinaComTela.dll
+C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.Balcao.resources
+C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.formsVenda.resources

@@ -1,17 +1,19 @@
+using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CantinaComTela
 {
-    public partial class Form1 : Form
+    public partial class formsVenda : Form
     {
-        public Form1()
+        public formsVenda()
         {
             InitializeComponent();
         }
 
         private double totalPedido = 0;
-        List<Cardapio> pedidos = new();
+        List<Cardapio> pedidos2 = new();
+        string check;
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -23,7 +25,7 @@ namespace CantinaComTela
                 Cardapio novoItem = new Cardapio(produtoSelecionado.Produto, produtoSelecionado.Preco);
                 novoItem.Quantidade = (int)quantidade.Value;
                 listBoxPedido.Items.Add(novoItem);
-                pedidos.Add(novoItem);
+                pedidos2.Add(novoItem);
                 totalPedido += produtoSelecionado.Preco * quant;
 
                 total.Text = $"Total: R${totalPedido:f2}";
@@ -86,6 +88,7 @@ namespace CantinaComTela
 
         private void btnRemover_Click_1(object sender, EventArgs e)
         {
+
             int quant = (int)quantidade.Value;
             if (listBoxPedido.SelectedIndex != -1 && quantidade.Value > 0)
             {
@@ -116,35 +119,65 @@ namespace CantinaComTela
         private void btnSair_Click(object sender, EventArgs e)
         {
 
-            if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && (textBox2.Text != ""))
-            {
-                string Pedido = string.Join("\n", pedidos);
 
-                MessageBox.Show(@$"Consumidor: {txtNome.Text}
+            if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && (textBox2.Text != "" && pagamentoBox1.SelectedIndex == 1 ))
+            {
+                string Pedido = string.Join("\n", pedidos2);
+
+                MessageBox.Show(@$"Cliente: {txtNome.Text}
 {Pedido}
 
 O total é R$ {totalPedido:f2}
 
-Para viajem: {comboBox1.Text}
+Para viagem: {comboBox1.Text}
+
+{dateTimePicker1.Text}  {dateTimePicker3.Text}
 ");
+
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
                 txtNome.Text = "";
                 pagamentoBox1.SelectedIndex = 0;
+            }
 
 
+            else if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && pagamentoBox1.SelectedIndex != 1)
+            {
+                string Pedido = string.Join("\n", pedidos2);
+
+                MessageBox.Show(@$"Cliente: {txtNome.Text}
+{Pedido}
+
+O total é R$ {totalPedido:f2}
+
+Para viagem: {comboBox1.Text}
+
+{dateTimePicker1.Text}  {dateTimePicker3.Text}
+");
+
+                total.Text = $"O total é R$ {totalPedido = 0}";
+                listBoxPedido.Items.Clear();
+                txtNome.Text = "";
+                pagamentoBox1.SelectedIndex = 0;
             }
 
             else if (txtNome.Text.Length <= 0)
             {
                 MessageBox.Show("Coloque um nome");
             }
-            
+
+            else if (listBoxPedido.Items.Count <= 0)
+            {
+                MessageBox.Show("Precisa de um item do cardápio");
+            }
+
             else
             {
-                MessageBox.Show("INVALIDO");
+                MessageBox.Show("Não tem o valor suficiente");
             }
         }
+
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -258,10 +291,37 @@ Para viajem: {comboBox1.Text}
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
 
         }
