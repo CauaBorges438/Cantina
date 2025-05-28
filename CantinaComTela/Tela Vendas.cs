@@ -1,6 +1,8 @@
 using System.Diagnostics.Eventing.Reader;
+using System.Net.Http.Headers;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static CantinaComTela.Carrinho;
 
 namespace CantinaComTela
 {
@@ -13,7 +15,12 @@ namespace CantinaComTela
 
         private double totalPedido = 0;
         List<Cardapio> pedidos2 = new();
-        string check;
+        public string formaPagamento;
+        public string cliente;
+        public string paraViagem;
+        public string hora;
+        
+        
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -120,10 +127,24 @@ namespace CantinaComTela
         {
 
 
-            if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && (textBox2.Text != "" && pagamentoBox1.SelectedIndex == 1 ))
-            {
-                string Pedido = string.Join("\n", pedidos2);
+            
 
+            if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && (textBox2.Text != "" && pagamentoBox1.SelectedIndex == 1))
+            {
+                formaPagamento = pagamentoBox1.Text;
+                paraViagem=comboBox1.Text;
+                cliente = txtNome.Text;
+                Carrinho novoPedido = new Carrinho();
+                {
+                    cliente = cliente;
+                    formaPagamento = formaPagamento;
+                    paraViagem = paraViagem;
+                    hora = dateTimePicker3.Text;
+                    BaseDados.pedidos.Add(novoPedido);
+
+                }
+                string Pedido = string.Join("\n", pedidos2);
+                
                 MessageBox.Show(@$"Cliente: {txtNome.Text}
 {Pedido}
 
@@ -131,11 +152,17 @@ O total é R$ {totalPedido:f2}
 
 Para viagem: {comboBox1.Text}
 
+Forma de Pagamento: {formaPagamento}
+
 {dateTimePicker1.Text}  {dateTimePicker3.Text}
 ");
 
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
+                pedidos2.Clear();
+                comboBox1.SelectedIndex = 0;
+                textBox2.Clear();
+                textBox3.Clear();
                 txtNome.Text = "";
                 pagamentoBox1.SelectedIndex = 0;
             }
@@ -144,7 +171,7 @@ Para viagem: {comboBox1.Text}
             else if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && pagamentoBox1.SelectedIndex != 1)
             {
                 string Pedido = string.Join("\n", pedidos2);
-
+                formaPagamento = pagamentoBox1.Text;
                 MessageBox.Show(@$"Cliente: {txtNome.Text}
 {Pedido}
 
@@ -152,11 +179,17 @@ O total é R$ {totalPedido:f2}
 
 Para viagem: {comboBox1.Text}
 
+Forma de Pagamento: {formaPagamento}
+
 {dateTimePicker1.Text}  {dateTimePicker3.Text}
 ");
-
+                
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
+                pedidos2.Clear();
+                comboBox1.SelectedIndex=0;
+                textBox2.Clear();
+                textBox3.Clear();
                 txtNome.Text = "";
                 pagamentoBox1.SelectedIndex = 0;
             }
@@ -175,6 +208,9 @@ Para viagem: {comboBox1.Text}
             {
                 MessageBox.Show("Não tem o valor suficiente");
             }
+
+
+
         }
 
 
@@ -324,6 +360,11 @@ Para viagem: {comboBox1.Text}
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged_2(object sender, EventArgs e)
+        {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }
