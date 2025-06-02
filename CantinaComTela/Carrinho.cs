@@ -8,42 +8,41 @@ namespace CantinaComTela
 {
     internal class Carrinho
     {
-        private string formaPgto;
-        private string nome;
-        //public List<Cardapio> pedidos = new List<Cardapio>();
-        private string status;
-        private string obterProduto;
 
-        public string ObterProduto
+        private List<Cardapio> produtos = new List<Cardapio>();
+
+        public void Adicionar(Cardapio novoProduto)
         {
-            get { return obterProduto; }
-            set { obterProduto = value; }
-
+            var existente = produtos.FirstOrDefault(p => p.Produto == novoProduto.Produto);
+            if (existente != null)
+            {
+                existente.Quantidade += novoProduto.Quantidade;
+            }
+            else
+            {
+                produtos.Add(novoProduto);
+            }
         }
-        public string FormaPgto
-        { get { return formaPgto; } set { formaPgto = value; } }
 
-        public string Nome
-        { get { return nome; } set { nome = value; } }
-
-        public string Status { get { return status; } set { status = value; } }
-
-        //public override string ToString()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    sb.Append($"Cliente: {nome} ");
-        //    foreach (Cardapio cardapio in pedidos)
-        //    {
-        //        sb.Append($"/ {cardapio.Quantidade}x - {cardapio.Produto}");
-        //    }
-        //    return sb.ToString();
-        //}
-        public static class BaseDados
+        public void Remover(Cardapio produto)
         {
-            public static List<Carrinho> pedidos = new List<Carrinho>();
+            produtos.Remove(produto);
+        }
+        public void Limpar()
+        {
+            produtos.Clear();
+        }
+        public double Total()
+        {
+            return produtos.Sum(p => p.Preco);
+        }
+        public List<Cardapio> ObterProdutos()
+        {
+            return produtos;
         }
     }
 }
+
     
     
 

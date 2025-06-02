@@ -86,6 +86,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(listBoxEntregue);
             Name = "Balcao";
+            Load += Balcao_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

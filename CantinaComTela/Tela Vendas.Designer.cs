@@ -52,6 +52,7 @@
             textBox3 = new TextBox();
             comboBox1 = new ComboBox();
             label5 = new Label();
+            btnBalcao = new Button();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -313,12 +314,25 @@
             label5.TabIndex = 29;
             label5.Text = "PARA VIAGEM:";
             // 
+            // btnBalcao
+            // 
+            btnBalcao.BackColor = Color.FromArgb(225, 255, 0);
+            btnBalcao.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBalcao.Location = new Point(906, 566);
+            btnBalcao.Name = "btnBalcao";
+            btnBalcao.Size = new Size(107, 23);
+            btnBalcao.TabIndex = 31;
+            btnBalcao.Text = "Balcão";
+            btnBalcao.UseVisualStyleBackColor = false;
+            btnBalcao.Click += btnBalcao_Click;
+            // 
             // formsVenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1046, 629);
+            Controls.Add(btnBalcao);
             Controls.Add(label5);
             Controls.Add(comboBox1);
             Controls.Add(textBox3);
@@ -378,5 +392,6 @@
         private TextBox textBox3;
         private ComboBox comboBox1;
         private Label label5;
+        private Button btnBalcao;
     }
 }
