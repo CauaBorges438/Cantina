@@ -39,9 +39,9 @@
             // 
             listBoxEntregue.FormattingEnabled = true;
             listBoxEntregue.ItemHeight = 15;
-            listBoxEntregue.Location = new Point(540, 153);
+            listBoxEntregue.Location = new Point(12, 425);
             listBoxEntregue.Name = "listBoxEntregue";
-            listBoxEntregue.Size = new Size(496, 424);
+            listBoxEntregue.Size = new Size(1024, 139);
             listBoxEntregue.TabIndex = 1;
             listBoxEntregue.SelectedIndexChanged += listBoxEntregue_SelectedIndexChanged;
             // 
@@ -61,7 +61,7 @@
             listBoxPedido.ItemHeight = 15;
             listBoxPedido.Location = new Point(12, 153);
             listBoxPedido.Name = "listBoxPedido";
-            listBoxPedido.Size = new Size(505, 424);
+            listBoxPedido.Size = new Size(1024, 244);
             listBoxPedido.TabIndex = 23;
             listBoxPedido.SelectedIndexChanged += listBoxPedido_SelectedIndexChanged;
             // 

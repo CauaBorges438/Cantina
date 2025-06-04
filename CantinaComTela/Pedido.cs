@@ -23,6 +23,7 @@ namespace CantinaComTela
         public static class BaseDePedidos
         {
             public static List<Pedido> Pedidos = new List<Pedido>();
+            
         }
     }
 }

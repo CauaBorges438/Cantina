@@ -11,20 +11,26 @@ namespace CantinaComTela
     {
         private static string caminho = "pedidos.json";
 
-    public static void Salvar(List<Pedido> pedidos)
-    {
-        string json = JsonSerializer.Serialize(pedidos, new JsonSerializerOptions { WriteIndented = true });
-        File.WriteAllText(caminho, json);
-    }
+        public static void Salvar(List<Pedido> pedidos)
+        {
+            string json = JsonSerializer.Serialize(pedidos, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(caminho, json);
+        }
 
-    public static List<Pedido> Carregar()
-    {
-        if (!File.Exists(caminho))
-            return new List<Pedido>();
+        public static List<Pedido> Carregar()
+        {
+            if (!File.Exists(caminho))
+                return new List<Pedido>();
 
-        string json = File.ReadAllText(caminho);
-        return JsonSerializer.Deserialize<List<Pedido>>(json);
+            string json = File.ReadAllText(caminho);
+            return JsonSerializer.Deserialize<List<Pedido>>(json);
+        }
+        public static List<Pedido> CarregarUltimosPedidos()
+        {
+            List<Pedido> todosPedidos = Carregar();
+            return todosPedidos.TakeLast(5).ToList();
+
+        }
     }
-}
 }
 

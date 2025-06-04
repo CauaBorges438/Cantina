@@ -25,30 +25,57 @@ namespace CantinaComTela
 
         private void listBoxEntregue_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listBoxEntregue.SelectedItems.Clear();
+            if (listBoxEntregue.Items.Count > 5)
+            {
+                listBoxEntregue.Items.RemoveAt(5);
+
+            }
 
         }
 
         private void btnEntregar_Click(object sender, EventArgs e)
         {
+            if (listBoxEntregue.Items.Count >= 6)
+            {
+                listBoxEntregue.Items.RemoveAt(5);
+                
+            }
             if (listBoxPedido.SelectedItem is Pedido pedidoSelecionado)
             {
                 pedidoSelecionado.Status = "- Entregue";
-                listBoxEntregue.Items.Add(pedidoSelecionado);
+                listBoxEntregue.Items.Insert(0,pedidoSelecionado);
                 listBoxPedido.Items.Remove(pedidoSelecionado);
                 Serializar.Salvar(BaseDePedidos.Pedidos);
             }
+
         }
 
         private void Balcao_Load(object sender, EventArgs e)
         {
-            listBoxPedido.Items.Clear();
-            BaseDePedidos.Pedidos = Serializar.Carregar();
+
+            //if (listBoxEntregue.Items.Count >= 6)
+            //{
+            //    listBoxEntregue.Items.RemoveAt(5);
+
+            //}
+
+
+
             foreach (var pedido in BaseDePedidos.Pedidos)
             {
-                if (pedido.Status != "Entregue")
-                    listBoxPedido.Items.Add(pedido);
+
+                if (pedido.Status == "- Entregue")
+                { 
+                BaseDePedidos.Pedidos = Serializar.CarregarUltimosPedidos();
+                listBoxEntregue.Items.Add(pedido);
+                }
                 else
-                    listBoxEntregue.Items.Add(pedido);
+                {
+                    BaseDePedidos.Pedidos = Serializar.Carregar();
+                    listBoxPedido.Items.Add(pedido);
+                }
+
             }
         }
     }
