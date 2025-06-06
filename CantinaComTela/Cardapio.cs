@@ -11,16 +11,22 @@ namespace CantinaComTela
         private string produto;
         private double preco;
         private int quantidade;
+        private bool isChapa;
+        //private Status status;
 
-
-        public Cardapio(string produto, double preco)
+        public Cardapio(string produto, double preco, bool isChapa)
         {
             this.produto = produto;
             this.preco = preco;
             this.quantidade = 0;
+            this.isChapa = isChapa;
 
+            
+                
         }
 
+        public bool IsChapa
+        { get { return isChapa; } }
         public string Produto
         {
             get { return produto; }
@@ -35,6 +41,8 @@ namespace CantinaComTela
             get { return quantidade; }
             set { quantidade = value; }
         }
+
+        
 
         public override string ToString()
         {

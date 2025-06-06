@@ -9,7 +9,7 @@ namespace CantinaComTela
     internal class Carrinho
     {
 
-        private List<Cardapio> produtos = new List<Cardapio>();
+        public List<Cardapio> produtos = new List<Cardapio>();
 
         public void Adicionar(Cardapio novoProduto)
         {
@@ -23,6 +23,8 @@ namespace CantinaComTela
                 produtos.Add(novoProduto);
             }
         }
+            
+
 
         public void Remover(Cardapio produto)
         {
@@ -40,6 +42,8 @@ namespace CantinaComTela
         {
             return produtos;
         }
+
+
     }
 }
 

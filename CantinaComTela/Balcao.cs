@@ -20,16 +20,25 @@ namespace CantinaComTela
 
         private void listBoxPedido_SelectedIndexChanged(object sender, EventArgs e)
         {
+     
 
         }
 
         private void listBoxEntregue_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             listBoxEntregue.SelectedItems.Clear();
+
+            BaseDePedidos.Pedidos = Serializar.CarregarUltimosPedidos();
             if (listBoxEntregue.Items.Count > 5)
             {
                 listBoxEntregue.Items.RemoveAt(5);
 
+            }
+
+            while (listBoxEntregue.Items.Count > 5)
+            {
+                listBoxPedido.Items.RemoveAt(0);
             }
 
         }
@@ -60,22 +69,26 @@ namespace CantinaComTela
 
             //}
 
+            listBoxPedido.Items.Clear();
 
+            BaseDePedidos.Pedidos = Serializar.Carregar();
 
             foreach (var pedido in BaseDePedidos.Pedidos)
             {
 
-                if (pedido.Status == "- Entregue")
-                { 
-                BaseDePedidos.Pedidos = Serializar.CarregarUltimosPedidos();
-                listBoxEntregue.Items.Add(pedido);
+
+                if (pedido.Status != "- Entregue")
+                {
+
+                    listBoxPedido.Items.Add(pedido);
                 }
                 else
                 {
-                    BaseDePedidos.Pedidos = Serializar.Carregar();
-                    listBoxPedido.Items.Add(pedido);
-                }
 
+                    listBoxEntregue.Items.Add(pedido);
+
+                }
+                
             }
         }
     }

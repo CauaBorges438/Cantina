@@ -32,7 +32,7 @@ namespace CantinaComTela
             if (listBoxProdutos.SelectedIndex != -1 && quantidade.Value > 0)
             {
                 Cardapio produtoSelecionado = (Cardapio)listBoxProdutos.SelectedItem;
-                Cardapio novoItem = new Cardapio(produtoSelecionado.Produto, produtoSelecionado.Preco);
+                Cardapio novoItem = new Cardapio(produtoSelecionado.Produto, produtoSelecionado.Preco, produtoSelecionado.IsChapa);
                 novoItem.Quantidade = (int)quantidade.Value;
                 listBoxPedido.Items.Add(novoItem);
                 pedidos2.Add(novoItem);
@@ -67,25 +67,25 @@ namespace CantinaComTela
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            listBoxProdutos.Items.Add(new Cardapio("Pão de Queijo", 3.50));
+            listBoxProdutos.Items.Add(new Cardapio("Pão de Queijo", 3.50, false));
 
-            listBoxProdutos.Items.Add(new Cardapio("Coxinha", 5.00));
+            listBoxProdutos.Items.Add(new Cardapio("Coxinha", 5.00, false));
 
-            listBoxProdutos.Items.Add(new Cardapio("Pastel de Carne", 6.00));
+            listBoxProdutos.Items.Add(new Cardapio("Pastel de Carne", 6.00, true));
 
-            listBoxProdutos.Items.Add(new Cardapio("Pastel de Queijo", 5.50));
+            listBoxProdutos.Items.Add(new Cardapio("Pastel de Queijo", 5.50, true));
 
-            listBoxProdutos.Items.Add(new Cardapio("Suco Natural (300ml)", 4.00));
+            listBoxProdutos.Items.Add(new Cardapio("Suco Natural (300ml)", 4.00, false));
 
-            listBoxProdutos.Items.Add(new Cardapio("Refrigerante Lata", 4.50));
+            listBoxProdutos.Items.Add(new Cardapio("Refrigerante Lata", 4.50, false));
 
-            listBoxProdutos.Items.Add(new Cardapio("Hambúrguer Simples ", 8.00));
+            listBoxProdutos.Items.Add(new Cardapio("Hambúrguer Simples ", 8.00, true));
 
-            listBoxProdutos.Items.Add(new Cardapio("Hambúrguer com Queijo ", 9.00));
+            listBoxProdutos.Items.Add(new Cardapio("Hambúrguer com Queijo ", 9.00, true));
 
-            listBoxProdutos.Items.Add(new Cardapio("X-Tudo ", 12.00));
+            listBoxProdutos.Items.Add(new Cardapio("X-Tudo ", 12.00, true));
 
-            listBoxProdutos.Items.Add(new Cardapio("Água Mineral (500ml)", 2.50));
+            listBoxProdutos.Items.Add(new Cardapio("Água Mineral (500ml)", 2.50, false));
 
             pagamentoBox1.Items.Add("Pix");
             pagamentoBox1.Items.Add("Dinheiro");
@@ -153,7 +153,10 @@ namespace CantinaComTela
                     ParaViagem = paraViagem,
                     Hora = agora,
                     Itens = string.Join(" ,", carrinho.ObterProdutos().Select(p => $"{p.Quantidade} x {p.Produto} - R$ {p.Preco * p.Quantidade:F2}"))
+
+                        
                 };
+                
                 BaseDePedidos.Pedidos.Add(novoPedido);
                 Serializar.Salvar(BaseDePedidos.Pedidos);
                 string Pedido = string.Join("\n", pedidos2);
@@ -169,6 +172,7 @@ Forma de Pagamento: {pagamentoBox1.Text}
 
 {DateTime.Now}  {dateTimePicker3.Text}
 ");
+                
 
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
@@ -198,7 +202,9 @@ Forma de Pagamento: {pagamentoBox1.Text}
                     ParaViagem = paraViagem,
                     Hora = agora,
                     Itens = string.Join(" ,", carrinho.ObterProdutos().Select(p => $"{p.Quantidade} x {p.Produto} - R$ {p.Preco * p.Quantidade:F2}"))
+                    
                 };
+
                 BaseDePedidos.Pedidos.Add(novoPedido);
                 Serializar.Salvar(BaseDePedidos.Pedidos);
                 string Pedido = string.Join("\n", pedidos2);
