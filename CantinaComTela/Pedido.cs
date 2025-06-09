@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,14 +9,15 @@ namespace CantinaComTela
 {
     internal class Pedido
     {
-        public bool chapa = true;
-
+        
+       
         public string Cliente { get; set; }
         public string Itens { get; set; }
         public string ParaViagem { get; set; }
         public string Status { get; set; }
         public string Hora { get; set; } //= DateTime.Now.ToShortTimeString();
 
+        public bool isChapa;
         
 
 
@@ -27,8 +29,10 @@ namespace CantinaComTela
 
         public static class BaseDePedidos
         {
+
             public static List<Pedido> Pedidos = new List<Pedido>();
-            
+
+
         }
     }
 }

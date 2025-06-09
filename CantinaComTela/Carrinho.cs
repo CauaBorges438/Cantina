@@ -9,7 +9,7 @@ namespace CantinaComTela
     internal class Carrinho
     {
 
-        public List<Cardapio> produtos = new List<Cardapio>();
+        public static List<Cardapio> produtos = new List<Cardapio>();
 
         public void Adicionar(Cardapio novoProduto)
         {

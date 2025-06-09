@@ -1,44 +1,44 @@
 [
   {
-    "Cliente": "sa",
+    "Cliente": "gr",
+    "Itens": "1 x Suco Natural (300ml) - R$ 4,00",
+    "ParaViagem": "N\u00E3o",
+    "Status": "- Entregue",
+    "Hora": "09:38:20"
+  },
+  {
+    "Cliente": "e a",
+    "Itens": "1 x X-Tudo  - R$ 12,00",
+    "ParaViagem": "N\u00E3o",
+    "Status": "- Entregue",
+    "Hora": "09:38:20"
+  },
+  {
+    "Cliente": "fas",
     "Itens": "1 x Coxinha - R$ 5,00",
     "ParaViagem": "N\u00E3o",
     "Status": "- Entregue",
-    "Hora": "10:22:03"
+    "Hora": "09:38:20"
   },
   {
     "Cliente": "asf",
-    "Itens": "2 x Coxinha - R$ 10,00",
+    "Itens": "1 x P\u00E3o de Queijo - R$ 3,50",
     "ParaViagem": "N\u00E3o",
     "Status": "- Entregue",
-    "Hora": "10:56:11"
+    "Hora": "10:09:47"
   },
   {
-    "Cliente": "f",
-    "Itens": "4 x P\u00E3o de Queijo - R$ 14,00",
+    "Cliente": "D",
+    "Itens": "1 x Suco Natural (300ml) - R$ 4,00",
     "ParaViagem": "N\u00E3o",
     "Status": "- Entregue",
-    "Hora": "10:56:11"
+    "Hora": "10:09:47"
   },
   {
-    "Cliente": "sf",
-    "Itens": "4 x Suco Natural (300ml) - R$ 16,00",
+    "Cliente": "saf",
+    "Itens": "1 x P\u00E3o de Queijo - R$ 3,50",
     "ParaViagem": "N\u00E3o",
     "Status": "- Entregue",
-    "Hora": "10:56:11"
-  },
-  {
-    "Cliente": "fdh",
-    "Itens": "4 x Suco Natural (300ml) - R$ 16,00",
-    "ParaViagem": "N\u00E3o",
-    "Status": "- Entregue",
-    "Hora": "10:56:11"
-  },
-  {
-    "Cliente": "hj",
-    "Itens": "3 x Pastel de Queijo - R$ 16,50",
-    "ParaViagem": "N\u00E3o",
-    "Status": "- Entregue",
-    "Hora": "10:56:11"
+    "Hora": "10:27:36"
   }
 ]

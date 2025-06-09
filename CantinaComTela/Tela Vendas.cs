@@ -135,9 +135,10 @@ namespace CantinaComTela
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-
-
-
+            //bool pedidoChapa = false;
+            //Pedido venda = new Pedido();
+            //venda.Pedidos= listBoxPedido.Items.Cast<Pedido>().ToList();
+            //venda.Cliente = txtNome.Text;
 
             if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && (textBox2.Text != "" && pagamentoBox1.SelectedIndex == 1))
             {
@@ -145,8 +146,22 @@ namespace CantinaComTela
                 string FormaPagamento = pagamentoBox1.SelectedItem?.ToString();
                 string nomeCliente = txtNome.Text;
                 string paraViagem = comboBox1.SelectedItem?.ToString() ?? "Não";
-
                 string agora = dateTimePicker3.Text;
+                //foreach (Pedido item in venda.Pedidos)
+                //{
+                //    if (item.isChapa)
+                //    {
+                //        pedidoChapa |= true;
+                //        break;
+                //    }
+                //}
+                //if (pedidoChapa)
+                //{
+                //    venda.Status = Status.Preparando;
+                //}
+                    
+
+                
                 Pedido novoPedido = new Pedido
                 {
                     Cliente = nomeCliente,

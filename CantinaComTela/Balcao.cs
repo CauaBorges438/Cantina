@@ -26,28 +26,30 @@ namespace CantinaComTela
 
         private void listBoxEntregue_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            listBoxEntregue.SelectedItems.Clear();
-
-            BaseDePedidos.Pedidos = Serializar.CarregarUltimosPedidos();
-            if (listBoxEntregue.Items.Count > 5)
             {
-                listBoxEntregue.Items.RemoveAt(5);
+                listBoxEntregue.Enabled = false;
+                listBoxEntregue.SelectedItems.Clear();
 
-            }
+                BaseDePedidos.Pedidos = Serializar.CarregarUltimosPedidos(); //<-- aqui é o problema
 
-            while (listBoxEntregue.Items.Count > 5)
-            {
-                listBoxPedido.Items.RemoveAt(0);
+                if (listBoxEntregue.Items.Count > 5)
+                {
+                    listBoxEntregue.Items.RemoveAt(4);
+                }
+
+                while (listBoxEntregue.Items.Count > 5)
+                {
+                    listBoxPedido.Items.RemoveAt(0);
+                }
             }
 
         }
 
         private void btnEntregar_Click(object sender, EventArgs e)
         {
-            if (listBoxEntregue.Items.Count >= 6)
+            if (listBoxEntregue.Items.Count > 4)
             {
-                listBoxEntregue.Items.RemoveAt(5);
+                listBoxEntregue.Items.RemoveAt(4);
                 
             }
             if (listBoxPedido.SelectedItem is Pedido pedidoSelecionado)
@@ -63,34 +65,24 @@ namespace CantinaComTela
         private void Balcao_Load(object sender, EventArgs e)
         {
 
-            //if (listBoxEntregue.Items.Count >= 6)
-            //{
-            //    listBoxEntregue.Items.RemoveAt(5);
-
-            //}
-
             listBoxPedido.Items.Clear();
+            listBoxEntregue.Items.Clear();
 
-            BaseDePedidos.Pedidos = Serializar.Carregar();
+            var todos = Serializar.Carregar();
 
-            foreach (var pedido in BaseDePedidos.Pedidos)
-            {
+            BaseDePedidos.Pedidos = todos;
 
+            var entregues = todos.Where(p => p.Status == "- Entregue").TakeLast(5);
+            var pendentes = todos.Where(p => p.Status != "- Entregue");
 
-                if (pedido.Status != "- Entregue")
-                {
+            foreach (var pedido in pendentes)
+                listBoxPedido.Items.Add(pedido);
 
-                    listBoxPedido.Items.Add(pedido);
-                }
-                else
-                {
+            foreach (var pedido in entregues)
+                listBoxEntregue.Items.Add(pedido);
 
-                    listBoxEntregue.Items.Add(pedido);
-
-                }
-                
-            }
         }
+        
     }
 }
 
