@@ -14,17 +14,17 @@ namespace CantinaComTela
         public string Cliente { get; set; }
         public string Itens { get; set; }
         public string ParaViagem { get; set; }
-        public string Status { get; set; }
+        public Status Status { get; set; }
         public string Hora { get; set; } //= DateTime.Now.ToShortTimeString();
 
-        public bool isChapa;
-        
+        public bool Chapa { get; set; }
+
 
 
 
         public override string ToString()
         {
-            return $"{Hora} - {Cliente} - {Itens} - Viagem: {ParaViagem} {Status}";
+            return $"{Hora} - {Cliente} - {Itens} - Viagem: {ParaViagem} - {this.Status}";
         }
 
         public static class BaseDePedidos

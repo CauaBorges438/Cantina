@@ -41,6 +41,7 @@
             listBoxPreparando.Name = "listBoxPreparando";
             listBoxPreparando.Size = new Size(433, 394);
             listBoxPreparando.TabIndex = 0;
+            listBoxPreparando.SelectedIndexChanged += listBoxPreparando_SelectedIndexChanged;
             // 
             // pictureBox1
             // 
@@ -61,6 +62,7 @@
             Controls.Add(listBoxPreparando);
             Name = "Cozinha";
             Text = "Form1";
+            Load += Cozinha_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

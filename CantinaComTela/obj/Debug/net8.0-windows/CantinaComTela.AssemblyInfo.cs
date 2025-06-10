@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CantinaComTela")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b15c05cdf033d195cbafd1e910a14daf9c4c6b71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3458c0eaadca5ac6ccebcedb9ca219a8e5455b32")]
 [assembly: System.Reflection.AssemblyProductAttribute("CantinaComTela")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CantinaComTela")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -53,6 +53,7 @@
             comboBox1 = new ComboBox();
             label5 = new Label();
             btnBalcao = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)quantidade).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -326,12 +327,25 @@
             btnBalcao.UseVisualStyleBackColor = false;
             btnBalcao.Click += btnBalcao_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(225, 255, 0);
+            button1.Font = new Font("Inter SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(906, 594);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 23);
+            button1.TabIndex = 32;
+            button1.Text = "Cozinha";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_2;
+            // 
             // formsVenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1046, 629);
+            Controls.Add(button1);
             Controls.Add(btnBalcao);
             Controls.Add(label5);
             Controls.Add(comboBox1);
@@ -393,5 +407,6 @@
         private ComboBox comboBox1;
         private Label label5;
         private Button btnBalcao;
+        private Button button1;
     }
 }

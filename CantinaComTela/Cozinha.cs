@@ -16,5 +16,26 @@ namespace CantinaComTela
         {
             InitializeComponent();
         }
+
+        private void listBoxPreparando_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cozinha_Load(object sender, EventArgs e)
+        {
+            
+            listBoxPreparando.Items.Clear();
+            var pedidos = Serializar.Carregar();
+
+            foreach (var pedido in pedidos)
+            {
+                if (pedido.Chapa && pedido.Status == Status.Preparando)
+                {
+                    listBoxPreparando.Items.Add(pedido);
+                }
+            }
+        }
     }
+    
 }

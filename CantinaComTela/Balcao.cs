@@ -54,7 +54,7 @@ namespace CantinaComTela
             }
             if (listBoxPedido.SelectedItem is Pedido pedidoSelecionado)
             {
-                pedidoSelecionado.Status = "- Entregue";
+                pedidoSelecionado.Status = Status.Entregue;
                 listBoxEntregue.Items.Insert(0,pedidoSelecionado);
                 listBoxPedido.Items.Remove(pedidoSelecionado);
                 Serializar.Salvar(BaseDePedidos.Pedidos);
@@ -72,8 +72,8 @@ namespace CantinaComTela
 
             BaseDePedidos.Pedidos = todos;
 
-            var entregues = todos.Where(p => p.Status == "- Entregue").TakeLast(5);
-            var pendentes = todos.Where(p => p.Status != "- Entregue");
+            var entregues = todos.Where(p => p.Status == Status.Entregue).TakeLast(5);
+            var pendentes = todos.Where(p => p.Status != Status.Entregue);
 
             foreach (var pedido in pendentes)
                 listBoxPedido.Items.Add(pedido);

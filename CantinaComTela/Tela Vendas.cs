@@ -22,7 +22,7 @@ namespace CantinaComTela
         public string cliente;
         public string paraViagem;
         public string hora;
-        
+
 
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace CantinaComTela
             {
                 Cardapio produtoSelecionado = (Cardapio)listBoxPedido.SelectedItem;
                 listBoxPedido.Items.Remove(produtoSelecionado);
-                
+
                 carrinho.Remover(produtoSelecionado);
                 totalPedido -= produtoSelecionado.Preco * produtoSelecionado.Quantidade;
 
@@ -159,19 +159,21 @@ namespace CantinaComTela
                 //{
                 //    venda.Status = Status.Preparando;
                 //}
-                    
 
-                
+
+
+                bool contemChapa = carrinho.ObterProdutos().Any(p => p.IsChapa);
+
                 Pedido novoPedido = new Pedido
                 {
                     Cliente = nomeCliente,
                     ParaViagem = paraViagem,
                     Hora = agora,
-                    Itens = string.Join(" ,", carrinho.ObterProdutos().Select(p => $"{p.Quantidade} x {p.Produto} - R$ {p.Preco * p.Quantidade:F2}"))
-
-                        
+                    Itens = string.Join(" ,", carrinho.ObterProdutos().Select(p => $"{p.Quantidade} x {p.Produto} - R$ {p.Preco * p.Quantidade:F2}")),
+                    Status = Status.Preparando.ToString(),
+                    Chapa = contemChapa
                 };
-                
+
                 BaseDePedidos.Pedidos.Add(novoPedido);
                 Serializar.Salvar(BaseDePedidos.Pedidos);
                 string Pedido = string.Join("\n", pedidos2);
@@ -187,7 +189,7 @@ Forma de Pagamento: {pagamentoBox1.Text}
 
 {DateTime.Now}  {dateTimePicker3.Text}
 ");
-                
+
 
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
@@ -217,7 +219,7 @@ Forma de Pagamento: {pagamentoBox1.Text}
                     ParaViagem = paraViagem,
                     Hora = agora,
                     Itens = string.Join(" ,", carrinho.ObterProdutos().Select(p => $"{p.Quantidade} x {p.Produto} - R$ {p.Preco * p.Quantidade:F2}"))
-                    
+
                 };
 
                 BaseDePedidos.Pedidos.Add(novoPedido);
@@ -424,7 +426,7 @@ Forma de Pagamento: {formaPagamento}
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -458,6 +460,21 @@ Forma de Pagamento: {formaPagamento}
         private void AtualizarTotal()
         {
             total.Text = $"Total: R${totalPedido:F2}";
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is Cozinha)
+                {
+                    f.Close();
+                    break;
+                }
+            }
+
+            Cozinha novaJanela = new Cozinha();
+            novaJanela.Show();
         }
     }
 }
