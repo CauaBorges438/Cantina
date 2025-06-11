@@ -13,7 +13,13 @@ namespace CantinaComTela
 
         public static void Salvar(List<Pedido> pedidos)
         {
-            string json = JsonSerializer.Serialize(pedidos, new JsonSerializerOptions { WriteIndented = true });
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter() }
+            };
+
+            string json = JsonSerializer.Serialize(pedidos, options);
             File.WriteAllText(caminho, json);
         }
 
@@ -23,7 +29,14 @@ namespace CantinaComTela
                 return new List<Pedido>();
 
             string json = File.ReadAllText(caminho);
-            return JsonSerializer.Deserialize<List<Pedido>>(json);
+
+            var options = new JsonSerializerOptions
+            {
+                Converters = { new System.Text.Json.Serialization.JsonStringEnumConverter() }
+            };
+
+            return JsonSerializer.Deserialize<List<Pedido>>(json, options);
+        
         }
         public static List<Pedido> CarregarUltimosPedidos()
         {

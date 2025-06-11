@@ -69,11 +69,10 @@ namespace CantinaComTela
             listBoxEntregue.Items.Clear();
 
             var todos = Serializar.Carregar();
-
             BaseDePedidos.Pedidos = todos;
 
             var entregues = todos.Where(p => p.Status == Status.Entregue).TakeLast(5);
-            var pendentes = todos.Where(p => p.Status != Status.Entregue);
+            var pendentes = todos.Where(p => !p.Chapa && p.Status != Status.Entregue);
 
             foreach (var pedido in pendentes)
                 listBoxPedido.Items.Add(pedido);

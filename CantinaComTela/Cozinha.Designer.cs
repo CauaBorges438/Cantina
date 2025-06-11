@@ -30,6 +30,7 @@
         {
             listBoxPreparando = new ListBox();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -37,9 +38,9 @@
             // 
             listBoxPreparando.FormattingEnabled = true;
             listBoxPreparando.ItemHeight = 15;
-            listBoxPreparando.Location = new Point(40, 169);
+            listBoxPreparando.Location = new Point(40, 229);
             listBoxPreparando.Name = "listBoxPreparando";
-            listBoxPreparando.Size = new Size(433, 394);
+            listBoxPreparando.Size = new Size(1019, 259);
             listBoxPreparando.TabIndex = 0;
             listBoxPreparando.SelectedIndexChanged += listBoxPreparando_SelectedIndexChanged;
             // 
@@ -53,11 +54,21 @@
             pictureBox1.TabIndex = 22;
             pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.Location = new Point(362, 534);
+            button1.Name = "button1";
+            button1.Size = new Size(340, 59);
+            button1.TabIndex = 23;
+            button1.Text = "Pronto";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Cozinha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1111, 674);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(listBoxPreparando);
             Name = "Cozinha";
@@ -71,5 +82,6 @@
 
         private ListBox listBoxPreparando;
         private PictureBox pictureBox1;
+        private Button button1;
     }
 }

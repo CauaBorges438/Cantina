@@ -25,8 +25,9 @@ namespace CantinaComTela
         private void Cozinha_Load(object sender, EventArgs e)
         {
             
-            listBoxPreparando.Items.Clear();
+            
             var pedidos = Serializar.Carregar();
+            listBoxPreparando.Items.Clear();
 
             foreach (var pedido in pedidos)
             {
@@ -37,5 +38,6 @@ namespace CantinaComTela
             }
         }
     }
-    
 }
+    
+

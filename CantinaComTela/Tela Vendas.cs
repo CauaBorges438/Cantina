@@ -135,46 +135,51 @@ namespace CantinaComTela
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            //bool pedidoChapa = false;
-            //Pedido venda = new Pedido();
-            //venda.Pedidos= listBoxPedido.Items.Cast<Pedido>().ToList();
-            //venda.Cliente = txtNome.Text;
+            
 
             if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && (textBox2.Text != "" && pagamentoBox1.SelectedIndex == 1))
             {
-                double toTal = carrinho.Total();
-                string FormaPagamento = pagamentoBox1.SelectedItem?.ToString();
+                var produtos = carrinho.ObterProdutos();
+                var produtosChapa = produtos.Where(p => p.IsChapa).ToList();
+                var produtosNaoChapa = produtos.Where(p => !p.IsChapa).ToList();
+
                 string nomeCliente = txtNome.Text;
                 string paraViagem = comboBox1.SelectedItem?.ToString() ?? "Não";
                 string agora = dateTimePicker3.Text;
-                //foreach (Pedido item in venda.Pedidos)
-                //{
-                //    if (item.isChapa)
-                //    {
-                //        pedidoChapa |= true;
-                //        break;
-                //    }
-                //}
-                //if (pedidoChapa)
-                //{
-                //    venda.Status = Status.Preparando;
-                //}
 
-
-
-                bool contemChapa = carrinho.ObterProdutos().Any(p => p.IsChapa);
-
-                Pedido novoPedido = new Pedido
+                
+                if (produtosChapa.Any())
                 {
-                    Cliente = nomeCliente,
-                    ParaViagem = paraViagem,
-                    Hora = agora,
-                    Itens = string.Join(" ,", carrinho.ObterProdutos().Select(p => $"{p.Quantidade} x {p.Produto} - R$ {p.Preco * p.Quantidade:F2}")),
-                    Status = Status.Preparando.ToString(),
-                    Chapa = contemChapa
-                };
+                    Pedido pedidoChapa = new Pedido
+                    {
+                        Cliente = nomeCliente,
+                        ParaViagem = paraViagem,
+                        Hora = agora,
+                        Itens = string.Join(", ", produtosChapa.Select(p => $"{p.Quantidade} x {p.Produto} - R$ {(p.Preco * p.Quantidade):F2}")),
+                        Status = Status.Preparando,
+                        Chapa = true
+                    };
 
-                BaseDePedidos.Pedidos.Add(novoPedido);
+                    BaseDePedidos.Pedidos.Add(pedidoChapa);
+                }
+
+                
+                if (produtosNaoChapa.Any())
+                {
+                    Pedido pedidoNormal = new Pedido
+                    {
+                        Cliente = nomeCliente,
+                        ParaViagem = paraViagem,
+                        Hora = agora,
+                        Itens = string.Join(", ", produtosNaoChapa.Select(p => $"{p.Quantidade} x {p.Produto} - R$ {(p.Preco * p.Quantidade):F2}")),
+                        Status = Status.Preparando,
+                        Chapa = false
+                    };
+
+                    BaseDePedidos.Pedidos.Add(pedidoNormal);
+                }
+
+               
                 Serializar.Salvar(BaseDePedidos.Pedidos);
                 string Pedido = string.Join("\n", pedidos2);
 
@@ -207,25 +212,50 @@ Forma de Pagamento: {pagamentoBox1.Text}
 
             else if (listBoxPedido.Items.Count != 0 && txtNome.Text.Length > 0 && pagamentoBox1.SelectedIndex != 1)
             {
-                double toTal = carrinho.Total();
-                string FormaPagamento = pagamentoBox1.SelectedItem?.ToString();
+                var produtos = carrinho.ObterProdutos();
+                var produtosChapa = produtos.Where(p => p.IsChapa).ToList();
+                var produtosNaoChapa = produtos.Where(p => !p.IsChapa).ToList();
+
                 string nomeCliente = txtNome.Text;
                 string paraViagem = comboBox1.SelectedItem?.ToString() ?? "Não";
-
                 string agora = dateTimePicker3.Text;
-                Pedido novoPedido = new Pedido
+
+
+                if (produtosChapa.Any())
                 {
-                    Cliente = nomeCliente,
-                    ParaViagem = paraViagem,
-                    Hora = agora,
-                    Itens = string.Join(" ,", carrinho.ObterProdutos().Select(p => $"{p.Quantidade} x {p.Produto} - R$ {p.Preco * p.Quantidade:F2}"))
+                    Pedido pedidoChapa = new Pedido
+                    {
+                        Cliente = nomeCliente,
+                        ParaViagem = paraViagem,
+                        Hora = agora,
+                        Itens = string.Join(", ", produtosChapa.Select(p => $"{p.Quantidade} x {p.Produto} - R$ {(p.Preco * p.Quantidade):F2}")),
+                        Status = Status.Preparando,
+                        Chapa = true
+                    };
 
-                };
+                    BaseDePedidos.Pedidos.Add(pedidoChapa);
+                }
 
-                BaseDePedidos.Pedidos.Add(novoPedido);
+
+                if (produtosNaoChapa.Any())
+                {
+                    Pedido pedidoNormal = new Pedido
+                    {
+                        Cliente = nomeCliente,
+                        ParaViagem = paraViagem,
+                        Hora = agora,
+                        Itens = string.Join(", ", produtosNaoChapa.Select(p => $"{p.Quantidade} x {p.Produto} - R$ {(p.Preco * p.Quantidade):F2}")),
+                        Status = Status.Preparando,
+                        Chapa = false
+                    };
+
+                    BaseDePedidos.Pedidos.Add(pedidoNormal);
+                }
+
+
                 Serializar.Salvar(BaseDePedidos.Pedidos);
                 string Pedido = string.Join("\n", pedidos2);
-                formaPagamento = pagamentoBox1.Text;
+
                 MessageBox.Show(@$"Cliente: {txtNome.Text}
 {Pedido}
 
@@ -233,10 +263,11 @@ O total é R$ {totalPedido:f2}
 
 Para viagem: {comboBox1.Text}
 
-Forma de Pagamento: {formaPagamento}
+Forma de Pagamento: {pagamentoBox1.Text}
 
-{dateTimePicker1.Text}  {dateTimePicker3.Text}
+{DateTime.Now}  {dateTimePicker3.Text}
 ");
+
 
                 total.Text = $"O total é R$ {totalPedido = 0}";
                 listBoxPedido.Items.Clear();
