@@ -1,42 +1,29 @@
 [
   {
-    "Cliente": "afaw",
-    "Itens": "1 x P\u00E3o de Queijo - R$ 3,50",
-    "ParaViagem": "N\u00E3o",
-    "Status": "Entregue",
-    "Hora": "08:52:41",
-    "Chapa": false
-  },
-  {
-    "Cliente": "ADA",
+    "Cliente": "as",
     "Itens": "1 x Pastel de Carne - R$ 6,00",
     "ParaViagem": "N\u00E3o",
-    "Status": "Preparando",
-    "Hora": "08:52:41",
+    "Status": "Entregue",
+    "Hora": "08:22:38",
+    "estaPronto": false,
     "Chapa": true
   },
   {
-    "Cliente": "ADA",
+    "Cliente": "aw",
+    "Itens": "1 x Hamb\u00FArguer Simples  - R$ 8,00",
+    "ParaViagem": "N\u00E3o",
+    "Status": "Entregue",
+    "Hora": "08:22:38",
+    "estaPronto": false,
+    "Chapa": true
+  },
+  {
+    "Cliente": "aw",
     "Itens": "1 x P\u00E3o de Queijo - R$ 3,50",
     "ParaViagem": "N\u00E3o",
     "Status": "Entregue",
-    "Hora": "08:52:41",
-    "Chapa": false
-  },
-  {
-    "Cliente": "daw",
-    "Itens": "1 x Hamb\u00FArguer Simples  - R$ 8,00",
-    "ParaViagem": "N\u00E3o",
-    "Status": "Preparando",
-    "Hora": "09:03:20",
-    "Chapa": true
-  },
-  {
-    "Cliente": "daw",
-    "Itens": "2 x P\u00E3o de Queijo - R$ 7,00, 1 x Refrigerante Lata - R$ 4,50",
-    "ParaViagem": "N\u00E3o",
-    "Status": "Entregue",
-    "Hora": "09:03:20",
+    "Hora": "08:22:38",
+    "estaPronto": false,
     "Chapa": false
   }
 ]

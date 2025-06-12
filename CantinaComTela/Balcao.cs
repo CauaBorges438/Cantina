@@ -72,7 +72,9 @@ namespace CantinaComTela
             BaseDePedidos.Pedidos = todos;
 
             var entregues = todos.Where(p => p.Status == Status.Entregue).TakeLast(5);
-            var pendentes = todos.Where(p => !p.Chapa && p.Status != Status.Entregue);
+            var pendentes = todos.Where(p =>
+                (p.Status == Status.Preparando && !p.Chapa) ||
+                (p.Status == Status.Pronto));
 
             foreach (var pedido in pendentes)
                 listBoxPedido.Items.Add(pedido);

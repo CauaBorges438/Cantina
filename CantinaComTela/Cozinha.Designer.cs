@@ -62,6 +62,7 @@
             button1.TabIndex = 23;
             button1.Text = "Pronto";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Cozinha
             // 

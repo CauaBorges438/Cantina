@@ -16,7 +16,8 @@ namespace CantinaComTela
         public string ParaViagem { get; set; }
         public Status Status { get; set; }
         public string Hora { get; set; } //= DateTime.Now.ToShortTimeString();
-
+        
+        public bool estaPronto { get; set; }
         public bool Chapa { get; set; }
 
 

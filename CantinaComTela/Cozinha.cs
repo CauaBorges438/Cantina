@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CantinaComTela.Pedido;
 
 namespace CantinaComTela
 {
@@ -24,8 +25,8 @@ namespace CantinaComTela
 
         private void Cozinha_Load(object sender, EventArgs e)
         {
-            
-            
+
+
             var pedidos = Serializar.Carregar();
             listBoxPreparando.Items.Clear();
 
@@ -37,7 +38,40 @@ namespace CantinaComTela
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listBoxPreparando.SelectedItem is Pedido pedidoSelecionado)
+            {
+               
+                pedidoSelecionado.Status = Status.Pronto;
+
+                
+                var todos = Serializar.Carregar();
+
+                
+                var pedidoOriginal = todos.FirstOrDefault(p =>
+                    p.Cliente == pedidoSelecionado.Cliente &&
+                    p.Hora == pedidoSelecionado.Hora &&
+                    p.Itens == pedidoSelecionado.Itens
+                );
+
+                if (pedidoOriginal != null)
+                {
+                    pedidoOriginal.Status = Status.Pronto;
+                    Serializar.Salvar(todos);
+                }
+                listBoxPreparando.Items.Remove(pedidoSelecionado);
+
+                MessageBox.Show("Pedido enviado ao Balcão.");
+            }
+            else
+            {
+                MessageBox.Show("Selecione um pedido.");
+            }
+        }
     }
+    
 }
     
 

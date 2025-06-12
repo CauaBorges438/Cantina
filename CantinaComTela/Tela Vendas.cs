@@ -172,7 +172,7 @@ namespace CantinaComTela
                         ParaViagem = paraViagem,
                         Hora = agora,
                         Itens = string.Join(", ", produtosNaoChapa.Select(p => $"{p.Quantidade} x {p.Produto} - R$ {(p.Preco * p.Quantidade):F2}")),
-                        Status = Status.Preparando,
+                        Status = Status.Pronto,
                         Chapa = false
                     };
 
@@ -245,7 +245,7 @@ Forma de Pagamento: {pagamentoBox1.Text}
                         ParaViagem = paraViagem,
                         Hora = agora,
                         Itens = string.Join(", ", produtosNaoChapa.Select(p => $"{p.Quantidade} x {p.Produto} - R$ {(p.Preco * p.Quantidade):F2}")),
-                        Status = Status.Preparando,
+                        Status = Status.Pronto,
                         Chapa = false
                     };
 
