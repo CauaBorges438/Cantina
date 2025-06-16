@@ -36,3 +36,4 @@ C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windo
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.Balcao.resources
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.formsVenda.resources
 C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.Cozinha.resources
+C:\Users\25163060\Downloads\cLONAR\Cantina\CantinaComTela\obj\Debug\net8.0-windows\CantinaComTela.TelaChamada.resources

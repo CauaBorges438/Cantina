@@ -67,19 +67,21 @@
             // 
             // btnEntregar
             // 
+            btnEntregar.BackColor = Color.FromArgb(225, 255, 0);
             btnEntregar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEntregar.Location = new Point(399, 612);
             btnEntregar.Name = "btnEntregar";
             btnEntregar.Size = new Size(244, 50);
             btnEntregar.TabIndex = 24;
             btnEntregar.Text = "Entregar";
-            btnEntregar.UseVisualStyleBackColor = true;
+            btnEntregar.UseVisualStyleBackColor = false;
             btnEntregar.Click += btnEntregar_Click;
             // 
             // Balcao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(1048, 698);
             Controls.Add(btnEntregar);
             Controls.Add(listBoxPedido);

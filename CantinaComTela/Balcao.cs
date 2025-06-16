@@ -47,6 +47,9 @@ namespace CantinaComTela
 
         private void btnEntregar_Click(object sender, EventArgs e)
         {
+            TelaChamada chamada = new TelaChamada();
+            BaseDePedidos Pedidos=new BaseDePedidos();
+            chamada.Show();
             if (listBoxEntregue.Items.Count > 4)
             {
                 listBoxEntregue.Items.RemoveAt(4);

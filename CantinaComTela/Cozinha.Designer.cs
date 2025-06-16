@@ -56,18 +56,20 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(225, 255, 0);
             button1.Location = new Point(362, 534);
             button1.Name = "button1";
             button1.Size = new Size(340, 59);
             button1.TabIndex = 23;
             button1.Text = "Pronto";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // Cozinha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(1111, 674);
             Controls.Add(button1);
             Controls.Add(pictureBox1);

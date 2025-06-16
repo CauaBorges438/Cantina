@@ -1,28 +1,10 @@
 [
   {
-    "Cliente": "as",
-    "Itens": "1 x Pastel de Carne - R$ 6,00",
+    "Cliente": "wada",
+    "Itens": "1 x Refrigerante Lata - R$ 4,50",
     "ParaViagem": "N\u00E3o",
     "Status": "Entregue",
-    "Hora": "08:22:38",
-    "estaPronto": false,
-    "Chapa": true
-  },
-  {
-    "Cliente": "aw",
-    "Itens": "1 x Hamb\u00FArguer Simples  - R$ 8,00",
-    "ParaViagem": "N\u00E3o",
-    "Status": "Entregue",
-    "Hora": "08:22:38",
-    "estaPronto": false,
-    "Chapa": true
-  },
-  {
-    "Cliente": "aw",
-    "Itens": "1 x P\u00E3o de Queijo - R$ 3,50",
-    "ParaViagem": "N\u00E3o",
-    "Status": "Entregue",
-    "Hora": "08:22:38",
+    "Hora": "10:17:45",
     "estaPronto": false,
     "Chapa": false
   }

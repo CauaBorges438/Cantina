@@ -28,7 +28,7 @@ namespace CantinaComTela
             return $"{Hora} - {Cliente} - {Itens} - Viagem: {ParaViagem} - {this.Status}";
         }
 
-        public static class BaseDePedidos
+        public class BaseDePedidos
         {
 
             public static List<Pedido> Pedidos = new List<Pedido>();
