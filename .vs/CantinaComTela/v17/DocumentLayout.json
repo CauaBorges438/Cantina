@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|c:\\users\\25163060\\downloads\\clonar\\cantina\\cantinacomtela\\telachamada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\telachamada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\cantinacomtela\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\cantinacomtela\\tela vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\tela vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\cantinacomtela\\balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|c:\\users\\25163060\\downloads\\clonar\\cantina\\cantinacomtela\\telachamada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\telachamada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|c:\\users\\25163060\\downloads\\clonar\\cantina\\cantinacomtela\\telachamada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +27,12 @@
       "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\balcao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|c:\\users\\25163060\\downloads\\clonar\\cantina\\cantinacomtela\\telaestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\telaestoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|c:\\users\\25163060\\downloads\\clonar\\cantina\\cantinacomtela\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\cantinacomtela\\tela vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\tela vendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\cantinacomtela\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9C05AE81-8EBB-4058-BF92-4F2111DD3E85}|CantinaComTela\\CantinaComTela.csproj|solutionrelative:cantinacomtela\\cozinha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\Pedido.cs",
               "RelativeDocumentMoniker": "CantinaComTela\\Pedido.cs",
@@ -51,12 +55,23 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-02T11:16:07.973Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "TelaEstoque.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\TelaEstoque.cs",
+              "RelativeDocumentMoniker": "CantinaComTela\\TelaEstoque.cs",
+              "ToolTip": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\TelaEstoque.cs [Projeto]",
+              "RelativeToolTip": "CantinaComTela\\TelaEstoque.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T13:44:24.224Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Balcao.cs",
               "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\Balcao.cs",
               "RelativeDocumentMoniker": "CantinaComTela\\Balcao.cs",
@@ -69,20 +84,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TelaChamada.cs",
               "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\TelaChamada.cs",
               "RelativeDocumentMoniker": "CantinaComTela\\TelaChamada.cs",
               "ToolTip": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\TelaChamada.cs",
               "RelativeToolTip": "CantinaComTela\\TelaChamada.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T11:42:28.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "TelaChamada.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\TelaChamada.cs",
               "RelativeDocumentMoniker": "CantinaComTela\\TelaChamada.cs",
@@ -94,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Balcao.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\Balcao.cs",
               "RelativeDocumentMoniker": "CantinaComTela\\Balcao.cs",
@@ -106,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Tela Vendas.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\Tela Vendas.cs",
               "RelativeDocumentMoniker": "CantinaComTela\\Tela Vendas.cs",
@@ -118,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Cozinha.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\25163060\\Downloads\\cLONAR\\Cantina\\CantinaComTela\\Cozinha.cs",
               "RelativeDocumentMoniker": "CantinaComTela\\Cozinha.cs",

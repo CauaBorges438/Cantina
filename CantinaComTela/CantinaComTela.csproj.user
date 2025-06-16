@@ -13,5 +13,8 @@
     <Compile Update="TelaChamada.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TelaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
